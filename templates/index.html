@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курс валют</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Курс валют</h1>
+    <table>
+        <tr>
+            <th>Валюта</th>
+            <th>Курс</th>
+        </tr>
+        {% for currency, rate in data.get("rates", {}).items() %}
+        <tr>
+            <td>{{ currency }}</td>
+            <td>{{ rate }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
