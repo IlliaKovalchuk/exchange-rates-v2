@@ -6,4 +6,4 @@ def get_exchange_rates():
     response = requests.get(API_URL)
     if response.status_code == 200:
         return response.json()
-    return {"error": "Unable to fetch data"}
+    return {"error": "Eror"}
